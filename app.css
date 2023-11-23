@@ -20,67 +20,214 @@
   --white-stroke-50: #dbdbdb;
 
   --green-hightlight: #36fba1;
+  --blue-highlight: #005bd3;
 
   --stroke-light-100: rgba(255, 255, 255, 0.2);
 }
 body {
   background: var(--primary-background-white);
   font-family: "Inter", sans-serif;
+  margin: 0px;
 }
 p {
   margin: 0;
   line-height: 140%;
 }
+button,
+a {
+  cursor: pointer;
+}
 
-@media only screen and (max-width: 600px) {
-  .navbar {
-    padding: 16px;
-    display: flex;
-  }
+.navbar {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: var(--grey-300);
+}
+.desktop-logo {
+  display: none;
+}
+.searchbar-wrapper {
+  padding: 8px;
+  background: var(--grey-200);
+  border-radius: 8px;
+  border: 1px solid var(--grey-stroke-200);
+  display: flex;
+  gap: 6px;
+  width: 480px;
+}
+.searchbar-wrapper:hover {
+  border: 1px solid var(--grey-stroke-100);
+}
+.searchbar-wrapper:focus {
+  border: 2px solid var(--white);
+}
+.searchbar-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+}
+.searchbar-wrapper input::placeholder {
+  color: var(--grey-100);
+  font-size: 13px;
+  font-weight: 500;
+}
+.right-panel {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.notification-icon {
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.profile-name {
+  display: none;
+}
+.profile-avatar {
+  margin: 2px;
+  padding: 9px 5px 10px 5px;
+  background-color: var(--green-hightlight);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.4);
+  width: 28px;
+  text-align: center;
+}
+
+.price-alert-container {
+  background: var(--grey-300);
+  padding: 12px 8px 12px 16px;
+  margin-top: 28px;
+  margin-bottom: 16px;
+  display: flex;
+  color: var(--primary-text-white);
+}
+.cancel-icon {
+  padding: 8px;
+}
+.price-cta {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 16px;
+  box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
+}
+
+.parent-accordion {
+  padding: 8px;
+  border: 1px solid var(--white-stroke-50);
+  background: var(--white);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.setup-guide-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+.guide-header {
+  color: var(--grey-200);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.guide-msg {
+  color: var(--grey-200);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.progress-info {
+  color: var(--grey-200);
+  font-size: 12px;
+}
+
+.panel {
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  margin-top: 16px;
+}
+.active {
+  border-radius: 10px;
+  background: var(--grey-background);
+}
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.step-header p {
+  font-size: 13px;
+  font-weight: 500;
+}
+.active > .step-header > p {
+  font-weight: 600;
+}
+
+.step-accordion {
+  padding: 8px;
+}
+.step-description {
+  margin-left: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  overflow: hidden;
+}
+.step-description-left {
+  display: flex;
+  flex-direction: column;
+}
+.step-description-left p {
+  margin-top: 16px;
+  color: var(--grey-stroke-200);
+  font-size: 13px;
+  font-weight: 500;
+}
+.step-description-left a {
+  color: var(--blue-highlight);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.step-desription-right img {
+ display: none;
+}
+.cuztomize-cta {
+  width: fit-content;
+  margin: 16px 0px 2px 2px;
+  padding: 6px 12px;
+  color: var(--secondary-white);
+  border-radius: 6px;
+  border-top: 1.5px solid var(--stroke-light-100);
+  border-right: 1.5px solid var(--stroke-light-100);
+  border-left: 1.5px solid var(--stroke-light-100);
+  background: var(--secondary-black);
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333,
+    0px 2px 0px 0px #000;
 }
 
 @media only screen and (min-width: 600px) {
-  .navbar {
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--grey-300);
-  }
-  .searchbar-wrapper {
-    padding: 8px;
-    background: var(--grey-200);
-    border-radius: 8px;
-    border: 1px solid var(--grey-stroke-200);
-    display: flex;
-    gap: 6px;
-    width: 480px;
-  }
-  .searchbar-wrapper:hover {
-    border: 1px solid var(--grey-stroke-100);
-  }
-  .searchbar-wrapper:focus {
-    border: 2px solid var(--white);
-  }
-  .searchbar-wrapper input {
-    border: none;
-    outline: none;
-    width: 100%;
-    background: transparent;
-    color: white;
-  }
-  .searchbar-wrapper input::placeholder {
-    color: var(--grey-100);
-  }
-  .right-panel {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
+  .mobile-logo {
+    display: none;
   }
   .notification-icon {
-    border-radius: 8px;
     padding: 8px;
+    border-radius: 8px;
     background: var(--grey-200);
   }
   .profile-tag {
@@ -92,22 +239,15 @@ p {
     padding: 2px 2px 2px 8px;
     gap: 8px;
   }
+  .profile-avatar {
+    margin: unset;
+  }
   .profile-name {
+    display: unset;
     color: var(--primary-text-white);
     font-size: 12px;
     font-weight: 500;
   }
-  .profile-avatar {
-    padding: 9px 5px 10px 5px;
-    background-color: var(--green-hightlight);
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.4);
-    width: 28px;
-    text-align: center;
-  }
-
   .main-container {
     width: 100%;
     max-width: 800px;
@@ -116,13 +256,10 @@ p {
 
   .price-alert-container {
     border-radius: 8px;
-    background: var(--grey-300);
     padding: 12px 16px;
     margin-top: 32px;
-    margin-bottom: 16px;
     display: flex;
     align-items: center;
-    color: var(--primary-text-white);
   }
   .msg-flex-wrapper {
     display: flex;
@@ -131,88 +268,16 @@ p {
     flex: 1;
   }
   .price-cta {
-    padding: 6px 12px;
-    border-radius: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: var(--white);
-    box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
+    margin-top: unset;
   }
   .cancel-icon {
     padding: 6px;
     margin-left: 8px;
   }
   .parent-accordion {
-    padding: 8px;
     border-radius: 18px;
-    border: 1px solid var(--white-stroke-50);
-    background: var(--white);
-    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
-  }
-  .setup-guide-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-  }
-  .guide-header {
-    color: var(--grey-200);
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .guide-msg {
-    color: var(--grey-200);
-    font-size: 13px;
-    margin-bottom: 16px;
-  }
-  .progress-info {
-    color: var(--grey-200);
-    font-size: 12px;
-  }
-  .panel {
-    background-color: white;
-    display: none;
-    overflow: hidden;
-  }
-  .active {
-    border-radius: 10px;
-    background: var(--grey-background);
-  }
-  .step-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .step-accordion {
-    padding: 8px;
-  }
-  .step-description {
-    margin-left: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    display: none;
-    overflow: hidden;
-  }
-  .step-description-left {
-    display: flex;
-    flex-direction: column;
-  }
-  .step-description-left p {
-    margin-top: 16px;
   }
   .step-desription-right img {
-    background:  var(--grey-background) / cover no-repeat;
-  }
-  .cuztomize-cta {
-    width: fit-content;
-    margin-top: 16px;
-    padding: 6px 12px;
-    color: var(--secondary-white);
-    border-radius: 6px;
-    border-top: 1.5px solid var(--stroke-light-100);
-    border-right: 1.5px solid var(--stroke-light-100);
-    border-left: 1.5px solid var(--stroke-light-100);
-    background: var(--secondary-black);
-    box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333,
-      0px 2px 0px 0px #000;
+    background: var(--grey-background) / cover no-repeat;
   }
 }
