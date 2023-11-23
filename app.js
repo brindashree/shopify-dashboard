@@ -1,6 +1,16 @@
 var parentAcc = document.getElementById("parent-accordion");
 var stepAcc = document.getElementsByClassName("step-accordion");
 var allStepAccordions = document.getElementsByClassName("step-accordion");
+var notificationIconEle = document.getElementById("notification-icon");
+
+notificationIconEle.addEventListener("click", function () {
+  var alertEle = document.querySelector(".alert-wrapper");
+  if (alertEle.style.display === "block") {
+    alertEle.style.display = "none";
+  } else {
+    alertEle.style.display = "block";
+  }
+});
 
 parentAcc.addEventListener("click", function () {
   var panel = document.getElementById("panel");

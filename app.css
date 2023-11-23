@@ -28,6 +28,7 @@ body {
   background: var(--primary-background-white);
   font-family: "Inter", sans-serif;
   margin: 0px;
+  box-sizing: border-box;
 }
 p {
   margin: 0;
@@ -46,6 +47,44 @@ a {
   gap: 8px;
   background-color: var(--grey-300);
 }
+.alert-wrapper {
+  display: none;
+  position: absolute;
+  top: 78px;
+  right: 16px;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0px 16px 16px;
+  width: calc(100vw - 65px);
+  max-width: 380px;
+  border: 1px solid var(--white-stroke-50);
+  background: var(--white);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.alert-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alert-header p {
+  color: var(--grey-200);
+  font-weight: 600;
+}
+.alert-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.alert-placeholder {
+  color: var(--grey-200);
+  text-align: center;
+  font-size: 13px;
+  padding: 16px;
+  background: var(--primary-background-white);
+  margin-top: 16px;
+  font-weight: 600;
+}
+
 .desktop-logo {
   display: none;
 }
@@ -205,7 +244,7 @@ a {
   text-decoration: none;
 }
 .step-desription-right img {
- display: none;
+  display: none;
 }
 .cuztomize-cta {
   width: fit-content;
@@ -224,6 +263,13 @@ a {
 @media only screen and (min-width: 600px) {
   .mobile-logo {
     display: none;
+  }
+
+  .desktop-logo {
+    display: unset;
+  }
+  .alert-wrapper {
+    top: 64px;
   }
   .notification-icon {
     padding: 8px;
