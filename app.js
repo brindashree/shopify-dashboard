@@ -2,7 +2,16 @@ var parentAcc = document.getElementById("parent-accordion");
 var stepAcc = document.getElementsByClassName("step-accordion");
 var allStepAccordions = document.getElementsByClassName("step-accordion");
 var notificationIconEle = document.getElementById("notification-icon");
+var navProfileTagEle = document.getElementById("menu-trigger");
 
+navProfileTagEle.addEventListener("click", function () {
+  var alertEle = document.querySelector(".menu-wrapper");
+  if (alertEle.style.display === "block") {
+    alertEle.style.display = "none";
+  } else {
+    alertEle.style.display = "block";
+  }
+});
 notificationIconEle.addEventListener("click", function () {
   var alertEle = document.querySelector(".alert-wrapper");
   if (alertEle.style.display === "block") {
