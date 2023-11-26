@@ -88,7 +88,13 @@
               />
             </svg>
           </div>
-          <div class="profile-tag" id="menu-trigger">
+          <div
+            class="profile-tag"
+            id="menu-trigger"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="menu-dialog"
+          >
             <div class="profile-name">Davii Collections</div>
             <div class="profile-avatar">DC</div>
           </div>
@@ -148,7 +154,12 @@
         </p>
       </div>
 
-      <div class="menu-wrapper" id="menu-dialog">
+      <div
+        class="menu-wrapper"
+        id="menu-dialog"
+        aria-labelledby="menu-trigger"
+        role="menu"
+      >
         <div class="profile-info-wrapper">
           <div class="flex">
             <div class="profile-name-avatar">DC</div>
@@ -172,7 +183,7 @@
             />
           </svg>
         </div>
-        <div class="menu-item m-6">
+        <div class="menu-item m-6" role="menuitem">
           <svg
             role="img"
             aria-label="An image of home outlined icon"
@@ -193,19 +204,19 @@
         </div>
         <div class="divider"></div>
         <div class="menu-section">
-          <div class="menu-item">
+          <div class="menu-item" role="menuitem">
             <p>Help Center</p>
           </div>
-          <div class="menu-item">
+          <div class="menu-item" role="menuitem">
             <p>Changelog</p>
           </div>
-          <div class="menu-item">
+          <div class="menu-item" role="menuitem">
             <p>Community forums</p>
           </div>
-          <div class="menu-item">
+          <div class="menu-item" role="menuitem">
             <p>Hire a Shopify Partner</p>
           </div>
-          <div class="menu-item">
+          <div class="menu-item" role="menuitem">
             <p>Keyboard shortcuts</p>
           </div>
         </div>
@@ -215,10 +226,10 @@
             <p class="font-medium-grey-200">David Micheal</p>
             <p class="font-regular-grey-100">davidmicheal@gmail.com</p>
           </div>
-          <div class="menu-item">
+          <div class="menu-item" role="menuitem">
             <p>Manage account</p>
           </div>
-          <div class="menu-item">
+          <div class="menu-item" role="menuitem">
             <p>Log out</p>
           </div>
         </div>
