@@ -15,16 +15,20 @@
     <div class="container">
       <nav class="navbar">
         <div class="logo">
-          <img
-            class="desktop-logo"
-            src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
-            alt="shopify logo"
-          />
-          <img
-            class="mobile-logo"
-            src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
-            alt="shopify logo"
-          />
+          <a href="https://www.shopify.com/" target="_blank">
+            <img
+              class="desktop-logo"
+              src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
+              alt="shopify logo"
+            />
+          </a>
+          <a href="https://www.shopify.com/" target="_blank">
+            <img
+              class="mobile-logo"
+              src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
+              alt="shopify logo"
+            />
+          </a>
         </div>
 
         <div class="searchbar-wrapper">
@@ -199,14 +203,19 @@
       </div>
 
       <div class="main-container">
-        <div class="price-alert-container">
+        <div class="price-alert-container" id="trial-callout">
           <div class="msg-flex-wrapper">
             <p class="price-alert-msg">
               Extend your trial for $1/month for 3 months on select plans.
             </p>
-            <button class="price-cta">Select a plan</button>
+            <button
+              class="price-cta"
+              onclick="redirect('https://www.shopify.com/pricing')"
+            >
+              Select a plan
+            </button>
           </div>
-          <div class="cancel-icon">
+          <div class="cancel-icon" id="cancel-cross-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -230,11 +239,13 @@
                 Use this personalised guide to get your store up and running.
               </p>
               <div class="progress-info">
-                <p>1 / 5 completed</p>
-                <div class="progress"></div>
+                <p id="steps-completed">0 / 5 completed</p>
+                <div class="progress">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
               </div>
             </div>
-            <div class="guide-right">
+            <div class="guide-right" id="panel-toggle" onclick="rotateImage()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -254,7 +265,12 @@
           <div class="panel" id="panel">
             <div class="step-accordion">
               <div class="step-header">
-                <div onmouseover="replaceSVG(1)" onmouseout="restoreSVG(1)">
+                <div
+                  onmouseover="replaceSVG(1)"
+                  onmouseout="restoreSVG(1)"
+                  onclick="completeStep(1)"
+                  id="svgContainer1"
+                >
                   <svg
                     id="svg1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -298,7 +314,12 @@
 
             <div class="step-accordion">
               <div class="step-header">
-                <div onmouseover="replaceSVG(2)" onmouseout="restoreSVG(2)">
+                <div
+                  onmouseover="replaceSVG(2)"
+                  onmouseout="restoreSVG(2)"
+                  onclick="completeStep(2)"
+                  id="svgContainer2"
+                >
                   <svg
                     id="svg2"
                     xmlns="http://www.w3.org/2000/svg"
@@ -341,7 +362,12 @@
 
             <div class="step-accordion">
               <div class="step-header">
-                <div onmouseover="replaceSVG(3)" onmouseout="restoreSVG(3)">
+                <div
+                  onmouseover="replaceSVG(3)"
+                  onmouseout="restoreSVG(3)"
+                  onclick="completeStep(3)"
+                  id="svgContainer3"
+                >
                   <svg
                     id="svg3"
                     xmlns="http://www.w3.org/2000/svg"
@@ -384,7 +410,12 @@
             </div>
             <div class="step-accordion">
               <div class="step-header">
-                <div onmouseover="replaceSVG(4)" onmouseout="restoreSVG(4)">
+                <div
+                  onmouseover="replaceSVG(4)"
+                  onmouseout="restoreSVG(4)"
+                  onclick="completeStep(4)"
+                  id="svgContainer4"
+                >
                   <svg
                     id="svg4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -427,7 +458,12 @@
             </div>
             <div class="step-accordion">
               <div class="step-header">
-                <div onmouseover="replaceSVG(5)" onmouseout="restoreSVG(5)">
+                <div
+                  onmouseover="replaceSVG(5)"
+                  onmouseout="restoreSVG(5)"
+                  onclick="completeStep(5)"
+                  id="svgContainer5"
+                >
                   <svg
                     id="svg5"
                     xmlns="http://www.w3.org/2000/svg"

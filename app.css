@@ -11,7 +11,8 @@
   --grey-background: #f3f3f3;
   --grey-stroke-200: #616161;
   --secondary-black: #404040;
-
+  --font-dark: #323232;
+  --states-hover: #f1f1f1;
   /* white */
   --white: #fff;
   --secondary-white: #f6f3f6;
@@ -201,7 +202,14 @@ a {
   border-radius: 8px;
   padding: 6px;
 }
-
+.guide-right {
+  border-radius: 6px;
+  padding: 4px;
+  height: fit-content;
+}
+.guide-right:hover {
+  background: var(--states-hover);
+}
 .profile-name {
   display: none;
 }
@@ -236,6 +244,7 @@ a {
   font-size: 12px;
   font-weight: 600;
   margin-top: 16px;
+  color: var(--font-dark);
   box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
 }
 
@@ -265,6 +274,22 @@ a {
 .progress-info {
   color: var(--grey-200);
   font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress {
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--primary-text-white);
+}
+.progress-bar {
+  background-color: var(--grey-300);
+  height: 4px;
+  border-radius: 2px;
+  display: none;
 }
 
 .panel {
@@ -292,6 +317,7 @@ a {
 
 .step-accordion {
   padding: 8px;
+  cursor: pointer;
 }
 .step-description {
   margin-left: 32px;
@@ -398,6 +424,7 @@ a {
   .cancel-icon {
     padding: 6px;
     margin-left: 8px;
+    cursor: pointer;
   }
   .parent-accordion {
     border-radius: 18px;
