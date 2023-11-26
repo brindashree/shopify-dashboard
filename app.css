@@ -11,6 +11,7 @@
   --secondary-black: #404040;
   --font-dark: #323232;
   --states-hover: #f1f1f1;
+  --states-pressed: #f0f0f0;
   /* white */
   --white: #fff;
   --secondary-white: #f6f3f6;
@@ -142,6 +143,18 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.m-6 {
+  margin: 0px 6px;
+}
+.menu-item:hover {
+  background: var(--states-hover);
+}
+.menu-item:active {
+  background: var(--states-pressed);
+}
+.menu-item:focus {
+  border: 2px solid var(--blue-highlight);
 }
 .email-info {
   padding: 8px;
