@@ -63,12 +63,30 @@ crossIconBtn.addEventListener("click", () => {
   trialCalloutEle.style.visibility = "hidden";
 });
 
-navProfileTagEle.addEventListener("click", () =>
-  toggleDisplay(".menu-wrapper")
-);
-notificationIconEle.addEventListener("click", () =>
-  toggleDisplay(".alert-wrapper")
-);
+navProfileTagEle.addEventListener("click", () => {
+  toggleDisplay(".menu-wrapper");
+  const isExpanded =
+    navProfileTagEle?.attributes["aria-expanded"].value === "true";
+  const allMenuItems = document
+    .getElementById("menu-dialog")
+    .querySelectorAll('[role="menuitem]');
+  if (isExpanded) {
+    navProfileTagEle.ariaExpanded = "false";
+  } else {
+    navProfileTagEle.ariaExpanded = "true";
+    allMenuItems.item(0).focus();
+  }
+});
+notificationIconEle.addEventListener("click", () => {
+  toggleDisplay(".alert-wrapper");
+  const isExpanded =
+    notificationIconEle?.attributes["aria-expanded"].value === "true";
+  if (isExpanded) {
+    notificationIconEle.ariaExpanded = "false";
+  } else {
+    notificationIconEle.ariaExpanded = "true";
+  }
+});
 
 panelArrowEle.addEventListener("click", () => {
   const panel = document.getElementById("panel");

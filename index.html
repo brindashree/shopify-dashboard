@@ -70,7 +70,13 @@
         </div>
 
         <div class="right-panel">
-          <div class="notification-icon" id="notification-icon">
+          <div
+            class="notification-icon"
+            id="notification-icon"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="dialog"
+          >
             <svg
               role="img"
               aria-label="An image of notification bell icon"
@@ -101,7 +107,11 @@
         </div>
       </nav>
 
-      <div class="alert-wrapper" id="dialog">
+      <div
+        class="alert-wrapper"
+        id="dialog"
+        aria-labelledby="notification-icon"
+      >
         <div class="alert-header">
           <p>Alerts</p>
           <div class="alert-icons">
@@ -160,7 +170,7 @@
         aria-labelledby="menu-trigger"
         role="menu"
       >
-        <div class="profile-info-wrapper">
+        <div class="profile-info-wrapper" role="menuitem">
           <div class="flex">
             <div class="profile-name-avatar">DC</div>
             <p>Davii Collections</p>

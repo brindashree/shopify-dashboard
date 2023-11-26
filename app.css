@@ -110,6 +110,9 @@ a {
   margin: 0px 6px 4px 6px;
   padding: 4px 12px 4px 8px;
 }
+.profile-info-wrapper:focus {
+  border: 2px solid var(--blue-highlight);
+}
 .profile-info-wrapper p {
   color: var(--grey-200);
   font-size: 13px;
