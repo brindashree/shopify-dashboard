@@ -1,64 +1,95 @@
-var parentAcc = document.getElementById("parent-accordion");
-var stepAcc = document.getElementsByClassName("step-accordion");
-var allStepAccordions = document.getElementsByClassName("step-accordion");
-var notificationIconEle = document.getElementById("notification-icon");
-var navProfileTagEle = document.getElementById("menu-trigger");
+const parentAcc = document.getElementById("parent-accordion");
+const stepAcc = document.querySelectorAll(".step-accordion");
+const notificationIconEle = document.getElementById("notification-icon");
+const navProfileTagEle = document.getElementById("menu-trigger");
 
-navProfileTagEle.addEventListener("click", function () {
-  var alertEle = document.querySelector(".menu-wrapper");
-  if (alertEle.style.display === "block") {
-    alertEle.style.display = "none";
-  } else {
-    alertEle.style.display = "block";
-  }
-});
-notificationIconEle.addEventListener("click", function () {
-  var alertEle = document.querySelector(".alert-wrapper");
-  if (alertEle.style.display === "block") {
-    alertEle.style.display = "none";
-  } else {
-    alertEle.style.display = "block";
-  }
-});
+navProfileTagEle.addEventListener("click", () =>
+  toggleDisplay(".menu-wrapper")
+);
+notificationIconEle.addEventListener("click", () =>
+  toggleDisplay(".alert-wrapper")
+);
 
-parentAcc.addEventListener("click", function () {
-  var panel = document.getElementById("panel");
-  if (panel.style.display === "block") {
-    panel.style.display = "none";
-  } else {
-    panel.style.display = "block";
-    var firstStepAccordion = document.querySelector(".step-accordion");
-    if (firstStepAccordion) {
-      firstStepAccordion.classList.add("active");
-      var firstPanel = firstStepAccordion.querySelector(".step-description");
-      if (firstPanel) {
-        firstPanel.style.display = "flex";
-      }
-    }
+parentAcc.addEventListener("click", () => {
+  const panel = document.getElementById("panel");
+  panel.style.display = panel.style.display === "block" ? "none" : "block";
+
+  const firstStepAccordion = document.querySelector(".step-accordion");
+  if (firstStepAccordion) {
+    firstStepAccordion.classList.add("active");
+    const firstPanel = firstStepAccordion.querySelector(".step-description");
+    if (firstPanel) firstPanel.style.display = "flex";
   }
 });
 
-for (var i = 0; i < stepAcc.length; i++) {
-  stepAcc[i].addEventListener("click", function (event) {
+stepAcc.forEach((accordion) => {
+  accordion.addEventListener("click", (event) => {
     event.stopPropagation();
 
-    for (var j = 0; j < allStepAccordions.length; j++) {
-      if (allStepAccordions[j] !== this) {
-        allStepAccordions[j].classList.remove("active");
-        var otherPanel =
-          allStepAccordions[j].querySelector(".step-description");
-        if (otherPanel.style.display === "flex") {
+    document.querySelectorAll(".step-accordion").forEach((otherAccordion) => {
+      if (otherAccordion !== accordion) {
+        otherAccordion.classList.remove("active");
+        const otherPanel = otherAccordion.querySelector(".step-description");
+        if (otherPanel.style.display === "flex")
           otherPanel.style.display = "none";
-        }
       }
-    }
+    });
 
-    this.classList.toggle("active");
-    var panel = this.querySelector(".step-description");
-    if (panel.style.display === "flex") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "flex";
-    }
+    accordion.classList.toggle("active");
+    const panel = accordion.querySelector(".step-description");
+    panel.style.display = panel.style.display === "flex" ? "none" : "flex";
   });
+});
+
+function toggleDisplay(selector) {
+  const element = document.querySelector(selector);
+  element.style.display = element.style.display === "block" ? "none" : "block";
+}
+
+function replaceSVG(stepNumber) {
+  const svgContainer = document.getElementById(`svg${stepNumber}`);
+  svgContainer.innerHTML = `
+  <svg
+  id="svg${stepNumber}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  >
+  <circle
+    cx="12"
+    cy="12"
+    r="10"
+    stroke="#8A8A8A"
+    stroke-width="2.08333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  </svg>
+  `;
+}
+function restoreSVG(stepNumber) {
+  const svgContainer = document.getElementById(`svg${stepNumber}`);
+  svgContainer.innerHTML = `
+  <svg
+  id="svg${stepNumber}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <circle
+    cx="12"
+    cy="12"
+    r="10"
+    stroke="#8A8A8A"
+    stroke-width="2.08333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-dasharray="5 5"
+  />
+</svg>
+  `;
 }
