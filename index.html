@@ -13,20 +13,20 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar">
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="logo">
           <a href="https://www.shopify.com/" target="_blank">
             <img
               class="desktop-logo"
               src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
-              alt="shopify logo"
+              alt="Shopify desktop logo"
             />
           </a>
           <a href="https://www.shopify.com/" target="_blank">
             <img
               class="mobile-logo"
               src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
-              alt="shopify logo"
+              alt="Shopify mobile logo"
             />
           </a>
         </div>
@@ -54,6 +54,7 @@
             id="search"
             placeholder="Search"
             autocomplete="off"
+            aria-label="Search"
           />
         </div>
 
@@ -211,6 +212,8 @@
             <button
               class="price-cta"
               onclick="redirect('https://www.shopify.com/pricing')"
+              aria-label="Select a plan"
+              role="button"
             >
               Select a plan
             </button>
