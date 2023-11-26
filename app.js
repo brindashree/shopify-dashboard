@@ -81,10 +81,36 @@ function handleMenuEscape(event) {
     toggleMenu();
   }
 }
+function handleMenuItemArrowKeyPress(event, menuItemIndex) {
+  const isLastMenuItem = menuItemIndex === allMenuItems.length - 1;
+  const firstMenuItem = menuItemIndex === 0;
+  const nextMenuItem = allMenuItems.item(menuItemIndex + 1);
+  const prevMenuItem = allMenuItems.item(menuItemIndex - 1);
+
+  if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+    if (isLastMenuItem) {
+      allMenuItems.item(0).focus();
+      return;
+    }
+    nextMenuItem.focus();
+  }
+  if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+    if (firstMenuItem) {
+      allMenuItems.item(allMenuItems.length - 1).focus();
+      return;
+    }
+    prevMenuItem.focus();
+  }
+}
 function openMenu() {
   navProfileTagEle.ariaExpanded = "true";
   allMenuItems.item(0).focus();
   menuEle.addEventListener("keyup", handleMenuEscape);
+  allMenuItems.forEach(function (menuItem, menuItemIndex) {
+    menuItem.addEventListener("keyup", (e) =>
+      handleMenuItemArrowKeyPress(e, menuItemIndex)
+    );
+  });
 }
 function closeMenu() {
   navProfileTagEle.ariaExpanded = "false";

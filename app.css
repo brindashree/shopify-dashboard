@@ -125,7 +125,9 @@ a {
   font-size: 10.5px;
   color: rgba(0, 0, 0, 0.4);
   justify-content: center;
-  padding: 9.625px 5.875px 10.375px 6.125px;
+  height: 28px;
+  font-weight: 500;
+  padding: 4px 10px;
   border-radius: 5.25px;
   background: var(--green-hightlight);
 }
