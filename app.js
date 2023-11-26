@@ -7,6 +7,10 @@ const trialCalloutEle = document.getElementById("trial-callout");
 const panelArrowEle = document.getElementById("panel-toggle");
 const stepsCompletedEle = document.getElementById("steps-completed");
 const progressBarEle = document.getElementById("progress-bar");
+const menuEle = document.getElementById("menu-dialog");
+const allMenuItems = document
+  .getElementById("menu-dialog")
+  .querySelectorAll('[role="menuitem"]');
 
 let rotated = false;
 let stepsCompleted = 0;
@@ -62,21 +66,33 @@ function rotateImage() {
 crossIconBtn.addEventListener("click", () => {
   trialCalloutEle.style.visibility = "hidden";
 });
-
-navProfileTagEle.addEventListener("click", () => {
+function toggleMenu() {
   toggleDisplay(".menu-wrapper");
   const isExpanded =
     navProfileTagEle?.attributes["aria-expanded"].value === "true";
-  const allMenuItems = document
-    .getElementById("menu-dialog")
-    .querySelectorAll('[role="menuitem]');
   if (isExpanded) {
-    navProfileTagEle.ariaExpanded = "false";
+    closeMenu();
   } else {
-    navProfileTagEle.ariaExpanded = "true";
-    allMenuItems.item(0).focus();
+    openMenu();
   }
-});
+}
+function handleMenuEscape(event) {
+  if (event.key === "Escape") {
+    toggleMenu();
+  }
+}
+function openMenu() {
+  navProfileTagEle.ariaExpanded = "true";
+  allMenuItems.item(0).focus();
+  menuEle.addEventListener("keyup", handleMenuEscape);
+}
+function closeMenu() {
+  navProfileTagEle.ariaExpanded = "false";
+  navProfileTagEle?.focus();
+}
+
+navProfileTagEle.addEventListener("click", toggleMenu);
+
 notificationIconEle.addEventListener("click", () => {
   toggleDisplay(".alert-wrapper");
   const isExpanded =

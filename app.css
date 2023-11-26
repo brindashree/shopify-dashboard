@@ -215,6 +215,10 @@ a {
 .notification-icon {
   border-radius: 8px;
   padding: 6px;
+  border: none;
+}
+.notification-icon:focus {
+  border: 2px solid var(--blue-highlight);
 }
 .guide-right {
   border-radius: 6px;
@@ -403,6 +407,10 @@ a {
     padding: 2px 2px 2px 8px;
     gap: 8px;
     cursor: pointer;
+    border: none;
+  }
+  .profile-tag:focus {
+    border: 2px solid var(--blue-highlight);
   }
   .profile-avatar {
     margin: unset;
