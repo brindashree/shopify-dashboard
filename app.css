@@ -392,6 +392,13 @@ a {
   .step-description-right img {
     display: none;
   }
+  .profile-tag {
+    background: transparent;
+    border: none;
+  }
+  .notification-icon {
+    background: transparent;
+  }
 }
 
 @media only screen and (min-width: 600px) {
