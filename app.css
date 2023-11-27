@@ -286,6 +286,21 @@ a {
   color: var(--font-dark);
   box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
 }
+.price-cta:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #f7f7f7;
+  box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
+}
+.price-cta:active {
+  background: #f7f7f7;
+  box-shadow: 0px 2px 1.5px 0px #e2e2e2 inset;
+}
+.price-cta:focus {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--White, #fff);
+  box-shadow: 0px 0px 0px 3px #005bd3, 0px 0px 0px 1px #fff,
+    0px -1px 0px 0px #b5b5b5 inset;
+}
 
 .parent-accordion {
   padding: 8px;
