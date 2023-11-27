@@ -1,29 +1,57 @@
 :root {
-  /* color variables */
-
-  /* black */
   --grey-100: #b5b5b5;
   --grey-300: #1a1a1a;
   --grey-200: #303030;
   --grey-stroke-100: #e1e1e1;
   --grey-background: #f3f3f3;
   --grey-stroke-200: #616161;
+
   --secondary-black: #404040;
   --font-dark: #323232;
   --states-hover: #f1f1f1;
   --states-pressed: #f0f0f0;
-  /* white */
+
   --white: #fff;
   --secondary-white: #f6f3f6;
   --primary-background-white: #f1f1f1;
   --primary-text-white: #e3e3e3;
   --white-stroke-50: #dbdbdb;
-
   --green-hightlight: #36fba1;
   --blue-highlight: #005bd3;
-
   --stroke-light-100: rgba(255, 255, 255, 0.2);
 }
+
+.text-12-reg {
+  font-size: 12px;
+}
+.text-12-med {
+  font-size: 12px;
+  font-weight: 500;
+}
+.text-12-semi-bold {
+  font-size: 12px;
+  font-weight: 600;
+}
+.text-13-reg {
+  font-size: 13px;
+}
+.text-13-med {
+  font-size: 13px;
+  font-weight: 500;
+}
+.text-13-semi-bold {
+  font-size: 13px;
+  font-weight: 600;
+}
+.text-14-med {
+  font-size: 14px;
+  font-weight: 500;
+}
+.text-14-semi-bold {
+  font-size: 14px;
+  font-weight: 600;
+}
+
 body {
   background: var(--primary-background-white);
   font-family: "Inter", sans-serif;
@@ -68,7 +96,6 @@ a {
 }
 .alert-header p {
   color: var(--grey-200);
-  font-weight: 600;
 }
 .alert-icons {
   display: flex;
@@ -78,11 +105,9 @@ a {
 .alert-placeholder {
   color: var(--grey-200);
   text-align: center;
-  font-size: 13px;
   padding: 16px;
   background: var(--primary-background-white);
   margin-top: 16px;
-  font-weight: 600;
 }
 
 .menu-wrapper {
@@ -96,6 +121,9 @@ a {
   background: var(--white);
   padding: 6px 0px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.steps-completed {
+  color: var(--font-dark);
 }
 .flex {
   display: flex;
@@ -115,9 +143,7 @@ a {
 }
 .profile-info-wrapper p {
   color: var(--grey-200);
-  font-size: 13px;
   margin-left: 8px;
-  font-weight: 600;
 }
 .profile-name-avatar {
   display: flex;
@@ -140,7 +166,6 @@ a {
 }
 .menu-item p {
   color: var(--grey-200);
-  font-size: 13px;
 }
 .menu-item {
   padding: 6px;
@@ -200,13 +225,9 @@ a {
   width: 100%;
   background: transparent;
   color: white;
-  font-size: 13px;
-  font-weight: 500;
 }
 .searchbar-wrapper input::placeholder {
   color: var(--grey-100);
-  font-size: 13px;
-  font-weight: 500;
 }
 .right-panel {
   display: flex;
@@ -238,8 +259,6 @@ a {
   padding: 9px 5px 10px 5px;
   background-color: var(--green-hightlight);
   border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
   color: #146c45;
   width: 28px;
   text-align: center;
@@ -261,8 +280,6 @@ a {
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--white);
-  font-size: 12px;
-  font-weight: 600;
   margin-top: 16px;
   color: var(--font-dark);
   box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
@@ -282,18 +299,14 @@ a {
 }
 .guide-header {
   color: var(--grey-200);
-  font-size: 14px;
-  font-weight: 600;
   margin-bottom: 4px;
 }
 .guide-msg {
   color: var(--grey-200);
-  font-size: 13px;
   margin-bottom: 16px;
 }
 .progress-info {
   color: var(--grey-200);
-  font-size: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -327,10 +340,7 @@ a {
   align-items: center;
   gap: 8px;
 }
-.step-header p {
-  font-size: 13px;
-  font-weight: 500;
-}
+
 .active > .step-header > p {
   font-weight: 600;
 }
@@ -354,16 +364,12 @@ a {
 .step-description-left p {
   margin-top: 16px;
   color: var(--grey-stroke-200);
-  font-size: 13px;
-  font-weight: 500;
 }
 .step-description-left a {
   color: var(--blue-highlight);
-  font-size: 14px;
-  font-weight: 500;
   text-decoration: none;
 }
-.cuztomize-cta {
+.primary-btn {
   width: fit-content;
   margin: 16px 0px 2px 2px;
   padding: 6px 12px;
@@ -385,8 +391,6 @@ a {
   border-radius: 6px;
   margin-left: 16px;
   border: none;
-  font-size: 12px;
-  font-weight: 600;
 }
 @media only screen and (max-width: 600px) {
   .step-description-right img {
@@ -441,8 +445,6 @@ a {
   .profile-name {
     display: unset;
     color: var(--primary-text-white);
-    font-size: 12px;
-    font-weight: 500;
   }
   .main-container {
     width: 100%;

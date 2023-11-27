@@ -60,6 +60,7 @@
             </svg>
           </div>
           <input
+            class="text-13-med"
             type="search"
             name="search"
             id="search"
@@ -102,8 +103,8 @@
             aria-controls="menu-dialog"
             role="button"
           >
-            <div class="profile-name">Davii Collections</div>
-            <div class="profile-avatar">DC</div>
+            <div class="profile-name text-12-med">Davii Collections</div>
+            <div class="profile-avatar text-12-med">DC</div>
           </button>
         </div>
       </nav>
@@ -114,7 +115,7 @@
         aria-labelledby="notification-icon"
       >
         <div class="alert-header">
-          <p>Alerts</p>
+          <p class="text-14-semi-bold">Alerts</p>
           <div class="alert-icons">
             <svg
               role="img"
@@ -160,7 +161,7 @@
             </svg>
           </div>
         </div>
-        <p class="alert-placeholder">
+        <p class="alert-placeholder text-13-semi-bold">
           Alerts about your store and account will show here
         </p>
       </div>
@@ -179,7 +180,7 @@
         >
           <div class="flex">
             <div class="profile-name-avatar">DC</div>
-            <p>Davii Collections</p>
+            <p class="text-13-semi-bold">Davii Collections</p>
           </div>
           <svg
             role="img"
@@ -200,7 +201,7 @@
           </svg>
         </li>
         <li
-          class="menu-item m-6"
+          class="menu-item m-6 text-13-reg"
           role="menuitem"
           tabindex="0"
           onclick="redirect('https://admin.shopify.com/')"
@@ -226,7 +227,7 @@
         <div class="divider"></div>
         <div class="menu-section">
           <li
-            class="menu-item"
+            class="menu-item text-13-reg"
             role="menuitem"
             tabindex="0"
             onclick="redirect('https://admin.shopify.com/')"
@@ -234,7 +235,7 @@
             <p>Help Center</p>
           </li>
           <li
-            class="menu-item"
+            class="menu-item text-13-reg"
             role="menuitem"
             tabindex="0"
             onclick="redirect('https://admin.shopify.com/')"
@@ -242,7 +243,7 @@
             <p>Changelog</p>
           </li>
           <li
-            class="menu-item"
+            class="menu-item text-13-reg"
             role="menuitem"
             tabindex="0"
             onclick="redirect('https://admin.shopify.com/')"
@@ -250,7 +251,7 @@
             <p>Community forums</p>
           </li>
           <li
-            class="menu-item"
+            class="menu-item text-13-reg"
             role="menuitem"
             tabindex="0"
             onclick="redirect('https://admin.shopify.com/')"
@@ -258,7 +259,7 @@
             <p>Hire a Shopify Partner</p>
           </li>
           <li
-            class="menu-item"
+            class="menu-item text-13-reg"
             role="menuitem"
             tabindex="0"
             onclick="redirect('https://admin.shopify.com/')"
@@ -273,7 +274,7 @@
             <p class="font-regular-grey-100">davidmicheal@gmail.com</p>
           </div>
           <li
-            class="menu-item"
+            class="menu-item text-13-reg"
             role="menuitem"
             tabindex="0"
             onclick="redirect('https://admin.shopify.com/')"
@@ -281,7 +282,7 @@
             <p>Manage account</p>
           </li>
           <li
-            class="menu-item"
+            class="menu-item text-13-reg"
             role="menuitem"
             tabindex="0"
             onclick="redirect('https://admin.shopify.com/')"
@@ -294,11 +295,11 @@
       <div class="main-container">
         <div class="price-alert-container" id="trial-callout">
           <div class="msg-flex-wrapper">
-            <p class="price-alert-msg">
+            <p class="price-alert-msg text-13-med">
               Extend your trial for $1/month for 3 months on select plans.
             </p>
             <button
-              class="price-cta"
+              class="price-cta text-12-semi-bold"
               onclick="redirect('https://www.shopify.com/pricing')"
               aria-label="Select a plan"
               role="button"
@@ -327,12 +328,12 @@
         <div class="parent-accordion" id="parent-accordion">
           <div class="setup-guide-wrapper">
             <div class="guide-left">
-              <p class="guide-header">Setup guide</p>
-              <p class="guide-msg">
+              <p class="guide-header text-14-semi-bold">Setup guide</p>
+              <p class="guide-msg text-13-reg">
                 Use this personalised guide to get your store up and running.
               </p>
               <div class="progress-info">
-                <p id="steps-completed">0 / 5 completed</p>
+                <p id="steps-completed text-12-reg">0 / 5 completed</p>
                 <div class="progress">
                   <div class="progress-bar" id="progress-bar"></div>
                 </div>
@@ -390,19 +391,22 @@
                     />
                   </svg>
                 </div>
-                <p>Customize your online store</p>
+                <p class="text-13-med">Customize your online store</p>
               </div>
               <div class="step-description">
                 <div class="step-description-left">
-                  <p>
+                  <p class="text-13-med">
                     Choose a theme and add your logo, colors, and images to
                     reflect your brand.
-                    <a href="" aria-label="Learn More about theme selection"
+                    <a
+                      class="text-14-med"
+                      href=""
+                      aria-label="Learn More about theme selection"
                       >Learn more</a
                     >
                   </p>
 
-                  <button class="cuztomize-cta" role="button">
+                  <button class="primary-btn text-12-semi-bold" role="button">
                     Customize theme
                   </button>
                 </div>
@@ -447,22 +451,28 @@
                     />
                   </svg>
                 </div>
-                <p>Add your first product</p>
+                <p class="text-13-med">Add your first product</p>
               </div>
               <div class="step-description">
                 <div class="step-description-left">
-                  <p>
+                  <p class="text-13-med">
                     Write a description, add photos, and set pricing for the
                     products you plan to sell.
-                    <a href="" aria-label="Learn More about adding a product"
+                    <a
+                      class="text-14-med"
+                      href=""
+                      aria-label="Learn More about adding a product"
                       >Learn more</a
                     >
                   </p>
                   <div class="flex">
-                    <button class="cuztomize-cta" role="button">
+                    <button
+                      class="primary-btn text-12-semi-bold"
+                      role="button"
+                    >
                       Add product
                     </button>
-                    <button class="secondary-cta" role="button">
+                    <button class="secondary-cta text-12-semi-bold" role="button">
                       Import product
                     </button>
                   </div>
@@ -508,19 +518,22 @@
                     />
                   </svg>
                 </div>
-                <p>Add a custom domain</p>
+                <p class="text-13-med">Add a custom domain</p>
               </div>
               <div class="step-description">
                 <div class="step-description-left">
-                  <p>
+                  <p class="text-13-med">
                     Your current domain is 222219.myshopify.com but you can add
                     a custom domain to help customers find your online store.
-                    <a href="" aria-label="Learn More about adding a domain"
+                    <a
+                      href=""
+                      class="text-14-med"
+                      aria-label="Learn More about adding a domain"
                       >Learn more</a
                     >
                   </p>
 
-                  <button class="cuztomize-cta" role="button">
+                  <button class="primary-btn text-12-semi-bold" role="button">
                     Add domain
                   </button>
                 </div>
@@ -564,19 +577,22 @@
                     />
                   </svg>
                 </div>
-                <p>Name your store</p>
+                <p class="text-13-med">Name your store</p>
               </div>
               <div class="step-description">
                 <div class="step-description-left">
-                  <p>
+                  <p class="text-13-med">
                     Your temporary store name is currently Davii collections.
                     The store name appears in your admin and your online store.
-                    <a href="" aria-label="Learn More about naming your store"
+                    <a
+                      href=""
+                      class="text-14-med"
+                      aria-label="Learn More about naming your store"
                       >Learn more</a
                     >
                   </p>
 
-                  <button class="cuztomize-cta" role="button">
+                  <button class="primary-btn text-12-semi-bold" role="button">
                     Name store
                   </button>
                 </div>
@@ -620,20 +636,23 @@
                     />
                   </svg>
                 </div>
-                <p>Set up a payment provider</p>
+                <p class="text-13-med">Set up a payment provider</p>
               </div>
               <div class="step-description">
                 <div class="step-description-left">
-                  <p>
+                  <p class="text-13-med">
                     Choose a payment provider to start accepting payments.
                     You’ll need to create an account with the payment provider
                     and set it up with your Shopify store.
-                    <a href="" aria-label="Learn More about payment integration"
+                    <a
+                      href=""
+                      class="text-14-med"
+                      aria-label="Learn More about payment integration"
                       >Learn more</a
                     >
                   </p>
 
-                  <button class="cuztomize-cta" role="button">
+                  <button class="primary-btn text-12-semi-bold" role="button">
                     Set up payment
                   </button>
                 </div>
