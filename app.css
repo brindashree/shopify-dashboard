@@ -376,6 +376,7 @@ a {
   margin: 16px 0px 2px 2px;
   padding: 6px 12px;
   color: var(--secondary-white);
+
   border-radius: 6px;
   border-top: 1.5px solid var(--stroke-light-100);
   border-right: 1.5px solid var(--stroke-light-100);
@@ -384,15 +385,51 @@ a {
   box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333,
     0px 2px 0px 0px #000;
 }
+.primary-btn:hover {
+  border-radius: 6px;
+  border-top: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  border-right: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  background: #2a2a2a;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333,
+    0px 2px 0px 0px #000;
+}
+.primary-btn:active {
+  border-radius: 6px;
+  background: #2b2b2b;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 3px 0px 0px #000 inset;
+}
+.primary-btn:focus {
+  border-radius: 6px;
+  border-top: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  border-right: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+  background: #404040;
+  box-shadow: 0px 0px 0px 5px #005bd3, 0px 0px 0px 3px #fff,
+    0px 0px 0px 1.5px #333;
+}
 .secondary-cta {
   width: fit-content;
   margin: 16px 0px 2px 2px;
-  padding: 6px 12px;
+  padding: 8px 12px;
   color: var(--font-dark);
   background: transparent;
   border-radius: 6px;
   margin-left: 16px;
   border: none;
+}
+.secondary-cta:hover {
+  border-radius: 6px;
+  background: #e7e7e7;
+}
+.secondary-cta:active {
+  border-radius: 6px;
+  background: #e0e0e0;
+}
+.secondary-cta:focus {
+  border-radius: 6px;
+  border: 2px solid var(--states-focused, #005bd3);
+  background: #fff;
 }
 @media only screen and (max-width: 600px) {
   .step-description-right img {
